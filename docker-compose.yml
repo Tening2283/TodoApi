@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  todoapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todo_api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - JwtSettings__Secret=SuperSecretKey_ChangeMeInProduction_MinimumLength32Chars!
+      - JwtSettings__Issuer=TodoApi
+      - JwtSettings__Audience=TodoApiUsers
