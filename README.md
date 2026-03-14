@@ -30,7 +30,7 @@ Fonctionnalités :
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/Tening2283/TodoApi
+git clone https://github.com/Tening2283/TodoApi.git
 cd TodoApi
 
 # 2. Démarrer le container
